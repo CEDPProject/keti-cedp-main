@@ -1,0 +1,233 @@
+    :root {
+      --radius: 22px;
+      --accent: #2f80ed;
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    html,
+    body {
+      height: 100%
+    }
+
+    body {
+      margin: 0;
+      color: #fff;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Pretendard, Apple SD Gothic Neo, "Noto Sans KR", "Malgun Gothic", sans-serif;
+
+      /* 이미지 먼저, 그라데이션 나중 (첫 번째 레이어가 위에 그림) */
+      background-image:
+        url("./image/back.png"),
+        linear-gradient(160deg, rgba(14, 111, 108, .88), rgba(30, 161, 160, .78) 55%, rgba(99, 201, 192, .72));
+      background-blend-mode: overlay;
+      /* 필요 없으면 제거 */
+
+      /* 레이어별 속성 분리 */
+      background-position: center, center;
+      background-size: cover, cover;
+      background-repeat: no-repeat, no-repeat;
+      background-attachment: fixed, fixed;
+
+      /* 위 레이어(이미지)를 아래 레이어(그라데이션)와 블렌딩 */
+      background-blend-mode: overlay;
+    }
+
+    .container {
+      max-width: min(1760px, 92vw);
+      margin: 0 auto;
+      padding: min(5vh, 48px) 24px 48px;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-weight: 800;
+      line-height: 1.18;
+      font-size: clamp(28px, 4.6vw, 64px);
+      text-shadow: 0 4px 16px rgba(0, 0, 0, .25)
+    }
+
+    .subtitle {
+      color: #e6fffb;
+      opacity: .92;
+      font-size: clamp(14px, 1.4vw, 20px)
+    }
+
+    /* 카드 그리드 */
+    .grid {
+      margin-top: clamp(20px, 3vh, 36px);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: clamp(16px, 2vw, 28px);
+    }
+
+    @media (max-width: 1024px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    a.card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      padding: 22px;
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(255, 255, 255, .10), rgba(255, 255, 255, .03));
+      backdrop-filter: blur(4px);
+      text-decoration: none;
+      color: white;
+      isolation: isolate;
+      box-shadow: 0 1px 0 rgba(255, 255, 255, .06) inset, 0 0 0 1px rgba(255, 255, 255, .08) inset;
+      transition: transform .22s ease, box-shadow .22s ease, background .22s ease;
+      min-height: 240px;
+      outline: none;
+    }
+
+    a.card:hover,
+    a.card:focus-visible {
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, .18);
+    }
+
+    .art {
+      height: 160px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      background: linear-gradient(180deg, rgba(255, 255, 255, .12), rgba(255, 255, 255, .02));
+    }
+
+    .art img {
+      width: 88%;
+      height: auto
+    }
+
+    .title {
+      font-weight: 700;
+      line-height: 1.35;
+      font-size: clamp(16px, 1.45vw, 22px);
+      text-wrap: balance;
+    }
+
+    .go {
+      position: absolute;
+      right: 18px;
+      bottom: 18px;
+      font-size: 13px;
+      letter-spacing: .04em;
+      opacity: .9;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, .13);
+      border: 1px solid rgba(255, 255, 255, .25);
+    }
+
+    /* 하단 빠른 링크 */
+    .quick {
+      margin-top: clamp(16px, 4vh, 42px);
+      padding-top: 18px;
+      border-top: 1px solid rgba(255, 255, 255, .28);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px 32px;
+      align-items: center;
+      justify-content: flex-end;
+      color: #dff7f5;
+    }
+
+    .quick a {
+      color: #dff7f5;
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px dashed rgba(255, 255, 255, .3);
+      transition: transform .2s ease, background .2s ease, color .2s ease, border-color .2s ease;
+    }
+
+    .quick a:hover,
+    .quick a:focus-visible {
+      transform: translateY(-1px);
+      background: rgba(255, 255, 255, .18);
+      color: white;
+      border-color: transparent;
+      outline: none;
+    }
+
+    /* ─────────────────────────────
+   섹션 구분선 (진하게, 공통 클래스)
+   ───────────────────────────── */
+
+    /* 진한 구분선: 여백 컴팩트 */
+    .hr-strong {
+      height: 0;
+      border: 0;
+      border-top: 2px solid rgba(255, 255, 255, .55);
+      box-shadow: 0 0 10px rgba(0, 0, 0, .18), 0 1px 0 rgba(255, 255, 255, .25) inset;
+      margin: clamp(8px, 0.8vh, 8px) 0;
+      /* ← 여기 줄여서 간격 축소 */
+      backdrop-filter: blur(2px);
+    }
+
+    /* 구분선 자체 여백 더 압축 */
+
+
+    /* 제목 아래 라인 위치 조정 (여유 공간 확보) */
+    header {
+      margin-bottom: clamp(6px, 1.2vh, 6px);
+      /* 기존보다 확 줄임 */
+    }
+
+    /* 그리드 위 시작 간격도 살짝 줄이기(선 아래가 더 붙어 보이게) */
+    .grid {
+      margin-top: clamp(8px, 1.2vh, 8px);
+      /* 기존 20~36px → 축소 */
+    }
+
+    /* 하단 빠른 링크 영역 위쪽 라인 */
+    .quick {
+      margin-top: clamp(6px, 1vh, 6px);
+      /* 구분선과의 간격 줄임 */
+      padding-top: 0;
+      /* 위쪽 내부 여백 제거 */
+      /* 기존 border-top 제거 */
+      border-top: 0;
+    }
+
+    /* 칩 스타일 강화 */
+    .quick a {
+      font-weight: 800;
+      /* 더 두껍게 */
+      font-size: clamp(14px, 1.15vw, 18px);
+      /* 살짝 크게 */
+      color: #eafaf8;
+      text-decoration: none;
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: 1px dashed rgba(255, 255, 255, .38);
+      background: rgba(255, 255, 255, .18);
+      /* 배경 가시성 ↑ */
+      transition: transform .2s ease, background .2s ease, color .2s ease, border-color .2s ease;
+    }
+
+    .quick a:hover,
+    .quick a:focus-visible {
+      transform: translateY(-1px);
+      background: rgba(255, 255, 255, .26);
+      /* 호버 시 더 밝게 */
+      color: white;
+      border-color: rgba(255, 255, 255, .5);
+    }
