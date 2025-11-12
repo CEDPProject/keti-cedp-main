@@ -1,65 +1,87 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
-
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<!-- Yeon Sung -->
+<!-- <link href="https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap" rel="stylesheet"> -->
+
+<!-- Stylish -->
+<!-- <link href="https://fonts.googleapis.com/css2?family=Stylish&display=swap" rel="stylesheet"> -->
+
+<!-- Jua -->
+<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+
+
   <title>기후·환경 데이터 구축·처리 플랫폼</title>
-  <link rel="preload" as="image" href="./image/back.png">
-  <link rel="stylesheet" href="./main.css">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- 부드러운 한글/라틴 폰트: Pretendard Variable -->
+  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css" rel="stylesheet">
+  <!-- 커스텀 CSS -->
+  <link rel="stylesheet" href="./main.css" />
 </head>
+<body class="min-h-screen relative">
+  <!-- 배경 -->
+  <div class="fixed inset-0 -z-10">
+    <div class="absolute inset-0 bg-cover bg-center bg-no-repeat"
+      style="background-image: url('https://images.unsplash.com/photo-1626665357412-ddb33a18b35c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600');">
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-br from-emerald-50/70 via-teal-50/80 to-cyan-50/70"></div>
+    <div class="absolute inset-0 bg-radial-gradient-1"></div>
+    <div class="absolute inset-0 bg-radial-gradient-2"></div>
+  </div>
 
-<body>
-  <main class="container">
-    <header>
-      <h1>인류세의 기후테크 역량 강화를 위한 기후·환경 데이터 구축·처리 플랫폼</h1>
-    </header>
+  <!-- Hero (좌우 넓힘 + 두 줄 사이 간격 살짝 늘림) -->
+  <div class="relative overflow-hidden">
+    <div class="max-w-[1400px] mx-auto px-6 py-10 lg:py-16">
+      <div class="text-center">
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-100 rounded-full mb-8">
+          <svg class="w-4 h-4 text-emerald-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+          </svg>
+<span class="text-emerald-700 text-[12px] md:text-[13px] lg:text-sm leading-none">
+  Climate and Environmental Data Platform for Enhancing Climate Technology Capabilities in the Anthropocene
+</span>
+        </div>
 
-    <hr class="hr-strong">
+<h2
+  class="font-bold tracking-tight mx-auto mb-6
+         text-[20px] md:text-[40px] lg:text-[52px]
+         leading-[1.22]
+         max-w-[1200px]
+         bg-gradient-to-r from-emerald-900 via-teal-800 to-cyan-900 bg-clip-text text-transparent"
+>
+  <span class="block">인류세의 기후테크 역량 강화를 위한</span>
+  <span class="block mt-1">기후·환경 데이터 구축·처리 플랫폼</span>
+</h2>
+      </div>
+    </div>
+  </div>
 
-    <!-- 3×2 링크 카드 -->
-    <section class="grid" aria-label="서비스 바로가기">
-      <a class="card" data-href="https://example.com/re100">
-        <div class="art"><img alt="RE100 에너지 기후" src="./image/service1.png"></div>
-        <div class="title">RE100 달성을 위한 에너지 기후 정보 서비스</div>
-      </a>
+  <!-- 서비스 카드 그리드 -->
+  <div class="max-w-[1400px] mx-auto px-6 -mt-2 pb-14">
+    <div id="servicesGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"></div>
+  </div>
 
-      <a class="card" data-href="https://example.com/hvac">
-        <div class="art"><img alt="에너지 최적화 공조" src="./image/service2.png"></div>
-        <div class="title">에너지 최적화된 안전 공조 시스템</div>
-      </a>
+  <!-- 내부 플랫폼 바로가기 -->
+  <div class="max-w-[1400px] mx-auto px-6 pb-20">
+    <div class="flex flex-col items-end">
+      <h3 class="text-lg font-semibold text-slate-700 mb-4">기후환경 데이터 관리 플랫폼</h3>
+      <div id="platformLinks" class="flex flex-col md:flex-row gap-3"></div>
+    </div>
+  </div>
 
-      <a class="card" data-href="https://example.com/co2">
-        <div class="art"><img alt="탄소 배출량 모니터링" src="./image/service3.png"></div>
-        <div class="title">탄소 배출량 모니터링 플랫폼</div>
-      </a>
-
-      <a class="card" data-href="https://example.com/agri">
-        <div class="art"><img alt="농업 기후 정보" src="./image/service4.png"></div>
-        <div class="title">기후위기 대응을 위한 농업 기후 정보 서비스</div>
-      </a>
-
-      <a class="card" data-href="https://example.com/ev">
-        <div class="art"><img alt="전기차 인프라 정보" src="./image/service5.png"></div>
-        <div class="title">기후정보를 활용한 전기차 인프라 정보 서비스</div>
-      </a>
-
-      <a class="card" data-href="https://example.com/flood">
-        <div class="art"><img alt="침수 피해 지역 기준 신고 분석" src="./image/service6.png"></div>
-        <div class="title">침수 피해 지역 기준 신고 분석</div>
-      </a>
-    </section>
-
-    <hr class="hr-strong">
-
-    <!-- 하단 빠른 링크 -->
-    <nav class="quick" aria-label="오픈 서비스 목록">
-      <a data-href="https://example.com/manager">기후환경 데이터 관리/분석</a>
-      <a data-href="https://example.com/labeler">기후환경 데이터 레이블러</a>
-    </nav>
-  </main>
+  <!-- 푸터 -->
+  <div class="relative bg-gradient-to-r from-emerald-900 to-teal-900 text-white py-8">
+    <div class="max-w-[1400px] mx-auto px-6 text-center">
+      <p class="text-emerald-100">© 2025 기후·환경 데이터 구축·처리 플랫폼. All rights reserved.</p>
+    </div>
+  </div>
 
   <script src="./main.js"></script>
 </body>
-
 </html>
