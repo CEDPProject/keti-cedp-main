@@ -57,12 +57,12 @@ html, body {
 
 
 /* Stylish */
-/* html, body {
+html, body {
   font-family: "Stylish", var(--kr-fallback);
-} */
+}
 
 /* Jua */
-html, body {
+/* html, body {
   font-family: "Jua", var(--kr-fallback);
-}
+} */
 

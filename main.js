@@ -96,7 +96,7 @@ function renderServices() {
       <h3 class="text-lg font-semibold text-slate-900 mb-3 group-hover:text-emerald-700 transition-colors duration-300">
         ${s.title}
       </h3>
-      <p class="text-sm text-slate-600 leading-relaxed">${s.description}</p>
+      <p class="text text-slate-700 leading-relaxed">${s.description}</p>
     `;
     card.appendChild(content);
 
@@ -118,7 +118,7 @@ function renderPlatformLinks() {
   platformLinks.forEach((l) => {
     const btn = document.createElement("a");
     btn.className =
-      "platform-link group relative overflow-hidden bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-4 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105";
+      "platform-link group relative overflow-hidden bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-4 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-100";
     btn.href = l.href || "#";
     btn.target = "_blank";                 // ✅ 새 창/탭
     btn.rel = "noopener noreferrer";       // ✅ 보안
@@ -126,7 +126,7 @@ function renderPlatformLinks() {
     btn.innerHTML = `
       <div class="absolute inset-0 bg-gradient-to-r from-teal-600 to-emerald-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
       <div class="relative flex items-center gap-3">
-        <div class="w-10 h-10 rounded-lg bg-white/20 flex items-center justify-center group-hover:bg-white/30 transition-colors duration-300 shrink-0">
+        <div class="w-10 h-5 rounded-lg bg-white/20 flex items-center justify-center group-hover:bg-white/30 transition-colors duration-300 shrink-0">
           ${
             l.icon === "database"
               ? `<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
