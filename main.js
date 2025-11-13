@@ -14,7 +14,7 @@ const services = [
     title: "에너지 최적화된 안전 공조 시스템",
     image: "https://images.unsplash.com/photo-1567767292278-a4f21aa2d36e?auto=format&fit=crop&q=80&w=1200",
     description: "에너지 소비를 최적화하면서 안전한 실내 환경을 제공하는 공조 서비스 시스템",
-    href: "http://10.252.219.52:9066/Index/"
+    href: "https://cedp.air365.co.kr/info"
   },
   {
     id: 3,
@@ -22,7 +22,7 @@ const services = [
     image:
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1200",
     description: "탄소 중립 정책 대응을 위해 실제 측정량 기반 탄소 배출량 산출하고 확산 분석을 모델링",
-    href: "http://10.252.219.52:9066/Index/"
+    href: "https://cedp.air365.co.kr/monitoring"
   },
   {
     id: 4,
@@ -39,7 +39,7 @@ const services = [
     image:
       "https://images.unsplash.com/photo-1593941707874-ef25b8b4a92b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1200",
     description: "전기차 배터리 특성을 고려하여 충전시장 정보를 제공하고 지역 특성을 반영한 전기차 충전소 입지 선정 의사결정 지원",
-    href: "http://10.252.219.52:9066/Index/"
+    href: "http://www.ecobrain.net:28090/ChargerDemand"
   },
   {
     id: 6,
