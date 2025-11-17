@@ -31,7 +31,7 @@ const services = [
     //   "https://images.unsplash.com/photo-1762381157166-f51ac99ab412?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1200",
         "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&q=80&w=1200",
     description: "농업 분야에 필요한 기상기후 정보를 제공하고 농부의 의사결정을 적극적으로 지원할 수 있는 정보를 제공",
-    href: "http://10.252.219.52:9066/Index/"
+    href: "http://www.ecobrain.net:28090/FrostForecast"
   },
   {
     id: 5,
@@ -43,7 +43,7 @@ const services = [
   },
   {
     id: 6,
-    title: "침수 피해 지역 기준 신고 분석",
+    title: "기후 환경 침수 신고 해석 서비스",
     image:
       "https://images.unsplash.com/photo-1760500959977-c3d310ee876c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1200",
     description: "기후환경 변화로 인한 재난과 가장 연관성이 깊은 침수 문제의 해결을 돕기 위한 중요 점검 위치 및 신규 문제 지역 발굴",
