@@ -49,10 +49,14 @@ const platformLinks = [
 ];
 
 // 🔹 왼쪽 오픈소프트웨어 영역: 이름과 아이콘 타입 정리
+// const openSoftwareLinks = [
+//   { name: "데이터 전처리", icon: "preprocess", href: "https://github.com/CEDPProject/keti-ts-preprocessing.git" },
+//   { name: "데이터 품질 측정", icon: "quality", href: "https://github.com/CEDPProject/keti-ts-quality-measurement.git" },
+//   { name: "데이터 유사도 측정", icon: "similarity", href: "https://github.com/CEDPProject/keti-ts-dataset-search.git" }
+// ];
+
 const openSoftwareLinks = [
-  { name: "데이터 전처리", icon: "preprocess", href: "https://github.com/CEDPProject/keti-ts-preprocessing.git" },
-  { name: "데이터 품질 측정", icon: "quality", href: "https://github.com/CEDPProject/keti-ts-quality-measurement.git" },
-  { name: "데이터 유사도 측정", icon: "similarity", href: "https://github.com/CEDPProject/keti-ts-dataset-search.git" }
+  { name: "CEDP Project Github", icon: "quality", href: "https://github.com/CEDPProject" }
 ];
 
 const el = (tag, cls = "", html = "") => {
