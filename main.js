@@ -39,7 +39,7 @@ const services = [
     title: "기후 환경 관련 신고 해석 서비스",
     image: "https://images.unsplash.com/photo-1760500959977-c3d310ee876c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1200",
     description: "기후환경 변화로 인한 재난과 가장 연관성이 깊은 침수 문제의 해결을 돕기 위한 중요 점검 위치 및 신규 문제 지역 발굴",
-    href: "http://10.252.219.52:9066/Index/"
+    href: "http://10.252.219.52:5055"
   },
 ];
 
